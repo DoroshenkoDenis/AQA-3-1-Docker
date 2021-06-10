@@ -1,0 +1,16 @@
+# Версия Docker API
+version: '3.8'
+# Сервисы для запуска
+services:
+# Первый сервис - db
+  bd:
+# Образ на основе которого он будет запускаться
+    image: postgres:13.3-alpine
+# Пробросить порт 5432 хоста в порт 5432 контейнера
+    ports:
+      - 5432:5432
+# Переменные окружения
+    environment:
+      - POSTGRES_DB=appDb
+      - POSTGRES_USER=adminLogin
+      - POSTGRES_PASSWORD=xYghZPd1vO
